@@ -1,0 +1,67 @@
+{
+    "warehouse": "A",
+    "vehicle_capacity": 10,
+    "parcels": [
+        {
+            "id": "P101",
+            "weight": 5,
+            "priority": 8,
+            "deadline": 3,
+            "destination": "B"
+        },
+        {
+            "id": "P102",
+            "weight": 4,
+            "priority": 9,
+            "deadline": 2,
+            "destination": "C"
+        },
+        {
+            "id": "P103",
+            "weight": 6,
+            "priority": 5,
+            "deadline": 1,
+            "destination": "D"
+        },
+        {
+            "id": "P104",
+            "weight": 3,
+            "priority": 9,
+            "deadline": 1,
+            "destination": "D"
+        },
+        {
+            "id": "P105",
+            "weight": 2,
+            "priority": 7,
+            "deadline": 2,
+            "destination": "E"
+        }
+    ],
+    "graph": {
+        "A": {
+            "B": 4,
+            "C": 2
+        },
+        "B": {
+            "A": 4,
+            "C": 1,
+            "D": 5
+        },
+        "C": {
+            "A": 2,
+            "B": 1,
+            "D": 8,
+            "E": 10
+        },
+        "D": {
+            "B": 5,
+            "C": 8,
+            "E": 2
+        },
+        "E": {
+            "C": 10,
+            "D": 2
+        }
+    }
+}

@@ -1,0 +1,41 @@
+MINI-COURIER PLANNER - EXECUTION REPORT
+=======================================
+
+SORTED PARCELS
+ID      Weight  Priority  Deadline  Destination
+P104    3       9         1         D
+P102    4       9         2         C
+P101    5       8         3         B
+P105    2       7         2         E
+P103    6       5         1         D
+
+PACKING PLAN
+Vehicle capacity: 10 kg
+Used capacity: 9 kg
+Total priority score: 25
+
+Selected parcels:
+P104: 3 kg, priority 9, deadline 1, destination D
+P102: 4 kg, priority 9, deadline 2, destination C
+P105: 2 kg, priority 7, deadline 2, destination E
+
+DIJKSTRA SHORTEST PATHS
+Shortest paths from warehouse A:
+A: distance 0 km | path A
+B: distance 3 km | path A -> C -> B
+C: distance 2 km | path A -> C
+D: distance 8 km | path A -> C -> B -> D
+E: distance 10 km | path A -> C -> B -> D -> E
+
+TSP DELIVERY TOUR
+Stops include warehouse at start and end.
+Delivery destinations: C, D, E
+Route: A -> C -> D -> E -> A
+Total tour distance: 20 km
+
+Shortest-distance matrix (km):
+          A      C      D      E
+    A     0      2      8     10
+    C     2      0      6      8
+    D     8      6      0      2
+    E    10      8      2      0
